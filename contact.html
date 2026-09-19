@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Me</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #ef6a3d;
+            color: #111;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background: #292929;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ef6a3d;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ef6a3d;
+        }
+
+        /* ================= MAIN ================= */
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            background: #f2f2f2;
+            border-radius: 10px;
+            padding: 50px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .title h1 {
+            font-size: 45px;
+        }
+
+        .title h1 span {
+            color: #ef6a3d;
+        }
+
+        .title p {
+            margin-top: 10px;
+            color: #666;
+        }
+
+        /* ================= CONTACT AREA ================= */
+
+        .contact {
+            display: flex;
+            gap: 60px;
+        }
+
+        /* ================= CONTACT INFO ================= */
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h2 span {
+            color: #ef6a3d;
+        }
+
+        .contact-info p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .info-item h3 {
+            color: #ef6a3d;
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            margin: 0;
+        }
+
+        /* ================= FORM ================= */
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #ef6a3d;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background: #292929;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #ef6a3d;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .container {
+                margin: 25px 15px;
+                padding: 35px 20px;
+            }
+
+            .contact {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .title h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>Contact</span>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home-</a></li>
+                <li><a href="about.html">About Me-</a></li>
+                <li><a href="contact.html">Contact-</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= CONTACT PAGE ================= -->
+
+    <main class="container">
+
+        <div class="title">
+            <h1>Contact <span>Me</span></h1>
+            <p>I'd love to hear from you. Feel free to send me a message.</p>
+        </div>
+
+
+        <section class="contact">
+
+            <!-- ================= MY INFORMATION ================= -->
+
+            <div class="contact-info">
+
+                <h2>Let's <span>Talk</span></h2>
+
+                <p>
+                    If you have a question, project idea, or simply want
+                    to connect with me, you can use the contact form or
+                    reach me through the information below.
+                </p>
+
+                <div class="info-item">
+                    <h3>Name</h3>
+                    <p>Abdulaye</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <p>abdouldembele780@gmail.com</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Phone</h3>
+                    <p>+237 682309667</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Location</h3>
+                    <p>Bamenda,Cameroon</p>
+                </div>
+
+            </div>
+
+
+            <!-- ================= CONTACT FORM ================= -->
+
+            <form class="contact-form">
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    placeholder="Subject"
+                    required
+                >
+
+                <textarea
+                    placeholder="Write your message..."
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

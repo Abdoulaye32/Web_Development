@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Abdulaye's Portfolio</title>
+
+  <style>
+
+    :root {
+      --orange: #ff6a3d;
+      --dark: #2b2b2f;
+      --bg: #ef6a3d;
+      --text: #111;
+      --muted: #6b6b6b;
+      --white: #fff;
+      --black: #000;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--orange);
+      color: var(--text);
+    }
+
+
+    /* ================= LAYOUT ================= */
+
+    .wrap {
+      max-width: 1240px;
+      margin: 28px auto;
+      padding: 0 18px;
+
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 32px;
+
+      align-items: start;
+    }
+
+    .panel {
+      background: #f2f2f2;
+      border-radius: 6px;
+
+      box-shadow: 0 18px 35px rgba(0, 0, 0, .25);
+
+      overflow: hidden;
+    }
+
+
+    /* ================= NAVBAR ================= */
+
+    .nav {
+      background: var(--dark);
+      color: #fff;
+      
+
+      height: 60px;
+
+      display: flex;
+      align-items: center;
+
+      padding: 0 25px;
+
+      /* Space between logo, links and button */
+      gap: 30px;
+    }
+
+
+    /* Logo / Name */
+
+    .brand {
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+
+      font-weight: 800;
+      letter-spacing: .2px;
+
+      white-space: nowrap;
+    }
+
+    .brand .mark {
+      width: 14px;
+      height: 14px;
+
+      background: var(--orange);
+
+      border-radius: 3px;
+    }
+
+
+    /* Navigation */
+
+    .nav nav {
+      flex: 1;
+
+      display: flex;
+      justify-content: center;
+    }
+
+
+    .nav ul {
+      list-style: none;
+      font-weight: bold;
+
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      align-items: center;
+
+      /* THIS creates the space between Home,
+         About Me, Contact and Projects */
+      gap: 40px;
+
+      flex-wrap: nowrap;
+    }
+
+
+    .nav li {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .nav a {
+      color: #e6e6e6;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      font-size: 13px;
+      
+
+      opacity: .95;
+
+      white-space: nowrap;
+    }
+
+
+    .nav a:hover {
+      color: var(--orange);
+      opacity: 1;
+    }
+
+
+    /* Contact button */
+
+    .nav .contact-btn {
+      background: #fff;
+      color: #111;
+
+      text-decoration: none;
+
+      font-weight: 900;
+
+      padding: 9px 14px;
+
+      border-radius: 8px;
+
+      border: 0;
+
+      white-space: nowrap;
+
+      cursor: pointer;
+    }
+
+
+    .nav .contact-btn:hover {
+      background: var(--orange);
+      color: #fff;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+      padding: 64px 56px 56px;
+
+      background: #efefef;
+
+      min-height: 430px;
+
+      position: relative;
+    }
+
+
+    .hero .hi {
+      font-weight: 800;
+
+      font-size: 20px;
+
+      margin-bottom: 8px;
+
+      color: #333;
+    }
+
+
+    .hero h1 {
+      margin: 0;
+
+      font-size: 50px;
+
+      line-height: 1.05;
+
+      letter-spacing: -1px;
+    }
+
+
+    .hero h1 .accent {
+      color: var(--orange);
+    }
+
+
+    .hero p {
+      margin: 14px 0 26px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      max-width: 520px;
+
+      line-height: 1.6;
+    }
+
+
+    /* ================= BUTTONS ================= */
+
+    .cta-row {
+      display: flex;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+
+      margin-top: 6px;
+    }
+
+
+    .tag-btn {
+      padding: 10px 16px;
+
+      border-radius: 10px;
+
+      font-weight: 900;
+
+      font-size: 13px;
+
+      text-decoration: none;
+
+      display: inline-flex;
+
+      gap: 10px;
+
+      align-items: center;
+
+      border: 0;
+    }
+
+
+    .tag-btn.dark {
+      background: #111;
+
+      color: #fff;
+    }
+
+
+    .tag-btn.orange {
+      background: var(--orange);
+
+      color: #fff;
+    }
+
+
+    /* ================= BIG IMAGE ================= */
+
+    .avatar-big {
+      position: absolute;
+
+      right: 48px;
+
+      top: 92px;
+
+      width: 320px;
+
+      height: 320px;
+
+      border-radius: 50%;
+
+
+overflow: hidden;
+
+      background: #ddd;
+
+      box-shadow: 0 12px 25px rgba(0, 0, 0, .2);
+    }
+
+
+    .avatar-big img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transform: scale(1.06);
+
+      filter: grayscale(10%) contrast(1.05);
+    }
+
+
+    .avatar-big:after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background: radial-gradient(
+        circle at 35% 30%,
+        rgba(255, 255, 255, .08),
+        rgba(0, 0, 0, .20)
+      );
+
+      pointer-events: none;
+    }
+
+
+    /* ================= RIGHT PHONE ================= */
+
+    .side {
+      background: #000;
+
+      border-radius: 6px;
+
+      overflow: hidden;
+
+      box-shadow: 0 18px 35px rgba(0, 0, 0, .25);
+
+      border: 1px solid rgba(255, 255, 255, .08);
+    }
+
+
+    .phone-top {
+      background: #151515;
+
+      color: #eee;
+
+      padding: 12px 14px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      font-size: 12px;
+
+      letter-spacing: .2px;
+    }
+
+
+    .phone-main {
+      background: #f4f4f4;
+
+      padding: 18px 18px 14px;
+
+      position: relative;
+
+      min-height: 190px;
+    }
+
+
+    .phone-main .small-hi {
+      font-size: 12px;
+
+      font-weight: 800;
+
+      color: #333;
+
+      line-height: 1.4;
+    }
+
+
+    .phone-main .small-hi .name {
+      font-size: 18px;
+
+      font-weight: 1000;
+
+      color: #111;
+    }
+
+
+    .phone-main .small-hi .job {
+      font-size: 12px;
+
+      font-weight: 900;
+
+      color: #666;
+
+      margin-top: 2px;
+
+      display: block;
+    }
+
+
+    .avatar-small {
+      position: absolute;
+
+      right: 16px;
+
+      top: 18px;
+
+      width: 92px;
+
+      height: 92px;
+
+      border-radius: 50%;
+
+      overflow: hidden;
+
+      border: 4px solid #fff;
+
+      background: #ddd;
+    }
+
+
+    .avatar-small img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .phone-about {
+      background: #0e0e10;
+
+      color: #fff;
+
+      padding: 16px;
+
+      position: relative;
+
+      min-height: 170px;
+    }
+
+
+    .ring {
+      position: absolute;
+
+      left: 16px;
+
+      top: 10px;
+
+      width: 84px;
+
+      height: 84px;
+
+      border-radius: 50%;
+
+      overflow: hidden;
+
+      box-shadow: 0 0 0 8px rgba(255, 106, 61, .32);
+
+      background: #222;
+    }
+
+
+    .ring img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+
+    .phone-about .txt {
+      padding-left: 106px;
+    }
+
+
+    .phone-about h3 {
+      margin: 0 0 8px;
+
+      font-size: 12px;
+
+      opacity: .95;
+
+      font-weight: 1000;
+    }
+
+
+    .phone-about p {
+      margin: 0;
+
+      color: #d8d8d8;
+
+      font-size: 11px;
+
+      line-height: 1.45;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .phone-contact {
+      background: #fff;
+
+      padding: 16px;
+    }
+
+
+    .phone-contact h3 {
+      margin: 0 0 10px;
+
+      font-size: 12px;
+
+      font-weight: 1000;
+
+      color: #111;
+    }
+
+
+    .form {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 9px;
+    }
+
+
+    .input {
+      width: 100%;
+
+      padding: 8px 10px;
+
+      border: 1px solid rgba(0, 0, 0, .15);
+
+      border-radius: 8px;
+
+      font-size: 12px;
+
+      outline: none;
+
+      background: #fff;
+    }
+
+
+    textarea.input {
+      min-height: 72px;
+
+      resize: none;
+    }
+
+
+    .send {
+      margin-top: 2px;
+
+      padding: 10px;
+
+      border-radius: 8px;
+
+      border: 0;
+
+      background: #111;
+
+      color: #fff;
+
+      font-weight: 1000;
+
+      font-size: 12px;
+
+      cursor: pointer;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .phone-footer {
+      background: #0e0e10;
+
+      color: #d0d0d0;
+
+      padding: 10px 14px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      font-size: 11px;
+
+      border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+
+
+    .dots {
+      display: flex;
+
+      gap: 7px;
+    }
+
+
+    .dot {
+      width: 7px;
+
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: rgba(255, 255, 255, .22);
+    }
+
+   .dot.active {
+      background: var(--orange);
+    }
+
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 980px) {
+
+      .wrap {
+        grid-template-columns: 1fr;
+      }
+
+
+      .avatar-big {
+        position: relative;
+
+        right: auto;
+
+        top: auto;
+
+        margin: 24px auto 0;
+
+        width: 260px;
+
+        height: 260px;
+      }
+
+
+      .hero {
+        padding: 48px 20px 30px;
+      }
+
+    }
+
+
+    /* Smaller screens */
+
+    @media (max-width: 700px) {
+
+      .nav {
+        height: auto;
+
+        padding: 15px;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+      }
+
+
+      .nav nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        overflow-x: auto;
+      }
+
+
+      .nav ul {
+        gap: 25px;
+      }
+
+
+      .nav .contact-btn {
+        margin-left: auto;
+      }
+
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main class="wrap">
+
+
+    <!-- ================= LEFT PORTFOLIO ================= -->
+
+    <section class="panel">
+
+
+      <!-- NAVBAR -->
+
+      <header class="nav">
+
+
+        <!-- LOGO -->
+
+        <div class="brand">
+
+          <span class="mark"></span>
+
+          <span>Home Page</span>
+
+        </div>
+
+
+        <!-- NAVIGATION LINKS -->
+
+        <nav aria-label="Main navigation">
+
+          <ul style="display: flex; gap: 40px; list-style: none; margin: 0; padding: 0;">
+            <div>
+            <li>
+              <a href="index.html">Home-</a>
+            </li>
+            </div>
+            <div>
+            <li>
+              <a href="about.html">About Me-</a>
+            </li>
+            </div>
+            <div>
+            <li>
+              <a href="contact.html">Contact-</a>
+            </li>    
+            </div>
+            <div>
+            <li>
+              <a href="projects.html">Projects</a>
+            </li>
+            </div>
+
+          </ul>
+
+        </nav>
+
+
+        <!-- CONTACT BUTTON -->
+
+        <a
+          class="contact-btn"
+          href="contact.html"
+        >
+          Contact Me
+        </a>
+
+
+      </header>
+
+
+      <!-- ================= HERO ================= -->
+
+      <div class="hero">
+
+
+        <div class="hi">
+          Hi
+        </div>
+
+
+        <h1>
+
+          I'm
+          <span class="accent">
+            Abdulaye
+          </span>
+
+          <br>
+
+          a Web Developer
+
+        </h1>
+
+
+        <p>
+
+          I'm Abdulaye Baba Ahmadu, a student from the
+          Faculty of Science, Department of Computer Science
+          at the Catholic University of Cameroon and currently
+          learning web development. I'm passionate about
+          programming, web development and enjoy learning
+          how technologies work and building useful applications.
+
+        </p>
+
+
+        <!-- BUTTONS -->
+
+        <div class="cta-row">
+
+          <a
+            class="tag-btn dark"
+            href="contact.html"
+          >
+            Hire Me
+          </a>
+
+
+          <a
+            class="tag-btn orange"
+            href="projects.html"
+          >
+            Projects
+          </a>
+
+        </div>
+
+
+        <!-- BIG PROFILE IMAGE -->
+
+        <div class="avatar-big">
+
+          <img
+            src="portfolio1.JPG"
+            alt="Abdulaye"
+          >
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+    <!-- ================= RIGHT PHONE PREVIEW ================= -->
+
+    <aside class="side">
+
+
+      <div class="phone-top">
+
+        <span>
+          All
+        </span>
+
+        <span>
+          12:00
+        </span>
+
+      </div>
+
+
+      <!-- PHONE HOME -->
+
+      <div class="phone-main">
+
+        <div class="small-hi">
+
+          Hi
+
+          <br>
+
+          <span class="name">
+            I'm Abdulaye
+          </span>
+
+          <span class="job">
+            Web Developer
+          </span>
+
+        </div>
+
+
+        <div class="avatar-small">
+
+          <img
+            src="portfolio1.JPG"
+            alt="Abdulaye"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- PHONE ABOUT -->
+
+      <div class="phone-about">
+
+
+        <div class="ring">
+
+          <img
+            src="portfolio1.JPG"
+            alt="Abdulaye"
+          >
+
+        </div>
+
+
+        <div class="txt">
+
+          <h3>
+            About Me
+          </h3>
+
+
+          <h3 style="margin-top:-2px;color:var(--orange);"
+          >
+            Web Developer
+          </h3>
+
+
+          <p>
+
+            I build clean, responsive web interfaces
+            with modern tools.
+
+            I love turning ideas into fast,
+            accessible experiences.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- PHONE CONTACT -->
+
+      <div class="phone-contact">
+
+
+        <h3>
+          Contact Me
+        </h3>
+
+
+        <form
+          class="form"
+          onsubmit="event.preventDefault(); alert('Message sent (demo)!');"
+        >
+
+
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Name"
+            required
+          >
+
+
+          <input
+            class="input"
+            type="email"
+            placeholder="Email"
+            required
+          >
+
+
+          <textarea
+            class="input"
+            placeholder="Message"
+            required
+          ></textarea>
+
+
+          <button
+            class="send"
+            type="submit"
+          >
+            Send Message
+          </button>
+
+
+        </form>
+
+
+      </div>
+
+
+      <!-- PHONE FOOTER -->
+
+      <div class="phone-footer">
+
+
+        <span>
+          Social
+        </span>
+
+
+        <div class="dots">
+
+
+          <span class="dot active"></span>
+
+          <span class="dot"></span>
+
+          <span class="dot"></span>
+
+          <span class="dot"></span>
+
+
+        </div>
+
+
+      </div>
+
+
+    </aside>
+
+
+  </main>
+
+
+</body>
+
+</html>

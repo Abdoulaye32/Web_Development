@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Management System</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a0dad, #9b59b6);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #f1e6f7;
+            margin-bottom: 30px;
+        }
+
+        /* Add Task Form */
+
+        .task-form {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .task-form h2,
+        .task-list h2 {
+            color: #6a0dad;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border: 2px solid #6a0dad;
+        }
+
+        /* Add Button */
+
+        .add-btn {
+            width: 100%;
+            margin-top: 20px;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #6a0dad;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .add-btn:hover {
+            background: #4b087a;
+        }
+
+        /* Task List */
+
+        .task-list {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .task {
+            border-left: 5px solid #6a0dad;
+            background: #f8f2fb;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .task-info {
+            flex: 1;
+        }
+
+        .task-info h3 {
+            color: #6a0dad;
+            margin-bottom: 10px;
+        }
+
+        .task-info p {
+            margin: 6px 0;
+            color: #444;
+        }
+
+        .task-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .complete-btn,
+        .remove-btn {
+            border: none;
+            padding: 10px 15px;
+            border-radius: 7px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .complete-btn {
+            background: #28a745;
+        }
+
+        .remove-btn {
+            background: #dc3545;
+        }
+
+        .complete-btn:hover {
+            background: #1e7e34;
+        }
+
+        .remove-btn:hover {
+            background: #b52a37;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 25px 10px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .task {
+                flex-direction: column;
+            }
+
+            .task-buttons {
+                flex-direction: row;
+            }
+
+            .complete-btn,
+            .remove-btn {
+                flex: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+        <h1>Task Management</h1>
+
+        <p class="subtitle">
+            Organize your daily tasks easily
+        </p>
+
+
+        <!-- Add Task -->
+
+        <div class="task-form">
+
+            <h2>Add New Task</h2>
+
+            <label for="task">Task</label>
+            <input type="text" id="task"
+                   placeholder="Enter task name">
+
+            <label for="day">Day</label>
+            <input type="date" id="day">
+
+            <label for="time">Time</label>
+            <input type="time" id="time">
+
+            <label for="description">Description</label>
+            <textarea id="description"
+                      placeholder="Enter task description"></textarea>
+
+            <button class="add-btn">
+                + Add Task
+            </button>
+
+        </div>
+
+
+        <!-- Task List -->
+
+        <div class="task-list">
+
+            <h2>My Tasks</h2>
+
+            <div class="task">
+
+                <div class="task-info">
+
+                    <h3>Study Python</h3>
+
+                    <p>
+                        <strong>Day:</strong> Monday
+                    </p>
+
+                    <p>
+                        <strong>Time:</strong> 10:00 AM
+                    </p>
+
+                    <p>
+                        <strong>Description:</strong>
+                        Practice Python programming
+                        and complete exercises.
+                    </p>
+
+                </div>
+
+                <div class="task-buttons">
+
+                    <button class="complete-btn">
+                        ✔ Complete
+                    </button>
+
+                    <button class="remove-btn">
+                        🗑 Remove
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="task">
+
+                <div class="task-info">
+
+                    <h3>Work on Portfolio</h3>
+
+                    <p>
+                        <strong>Day:</strong> Tuesday
+                    </p>
+
+                    <p>
+                        <strong>Time:</strong> 2:00 PM
+                    </p>
+
+                    <p>
+                        <strong>Description:</strong>
+                        Continue designing my
+                        computer science portfolio.
+                    </p>
+
+                </div>
+
+                <div class="task-buttons">
+
+                    <button class="complete-btn">
+                        ✔ Complete
+                    </button>
+
+                    <button class="remove-btn">
+                        🗑 Remove
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #ef6a3d;
+            color: #111;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background: #292929;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ef6a3d;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ef6a3d;
+        }
+
+        /* ================= MAIN ================= */
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            background: #f2f2f2;
+            border-radius: 10px;
+            padding: 60px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ================= ABOUT SECTION ================= */
+
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .about-text h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .about-text h1 span {
+            color: #ef6a3d;
+        }
+
+        .about-text h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .about-text p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #555;
+            max-width: 600px;
+        }
+
+        /* ================= IMAGE ================= */
+
+        .profile-image {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid #ef6a3d;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ================= LITTLE ABOUT ME ================= */
+
+        .little-about {
+            margin-top: 70px;
+            background: #292929;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .little-about h2 {
+            color: #ef6a3d;
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+
+        .little-about p {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .nav-links {
+                gap: 35px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .container {
+                margin: 25px 15px;
+                padding: 35px 20px;
+            }
+
+            .about {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .about-text h1 {
+                font-size: 42px;
+            }
+
+            .about-text p {
+                margin: auto;
+            }
+.profile-image {
+                width: 250px;
+                height: 250px;
+            }
+
+            .little-about {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>About Me</span>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home-</a></li>
+                <li><a href="about.html">About Me-</a></li>
+                <li><a href="contact.html">Contact-</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+        <!-- ABOUT ME -->
+
+        <section class="about" id="home">
+
+            <div class="about-text">
+
+                <h4>Hello, I'm</h4>
+
+                <h1>
+                    Baba <span>Abdulaye</span>
+                </h1>
+
+                <h2>
+                    Computer Science Student
+                </h2>
+
+                <p>
+                    Welcome to my personal portfolio. I am a passionate
+                    Computer Science student interested in technology,
+                    programming and web development. I enjoy learning new
+                    skills and using technology to solve problems.
+                </p>
+
+            </div>
+
+
+            <!-- PROFILE IMAGE -->
+
+            <div class="profile-image">
+
+                <!-- Change profile.jpg to your own image -->
+                <img src="portfolio1.JPG" alt="My Profile Picture">
+
+            </div>
+
+        </section>
+
+
+        <!-- A LITTLE ABOUT ME -->
+
+        <section class="little-about" id="about">
+
+            <h2>A Little About Me</h2>
+
+            <p>
+                I am someone who enjoys discovering how technology works
+                and turning ideas into useful projects. I am currently
+                developing my skills in programming, HTML, CSS and other
+                areas of computer science.
+
+                <br><br>
+
+                I believe that learning is a continuous process, and I am
+                always willing to improve my knowledge, take on new
+                challenges and build interesting projects.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

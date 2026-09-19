@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Projects</title>
+
+  <style>
+    :root {
+      --orange: #ff6a3d;
+      --dark: #2b2b2f;
+      --light: #efefef;
+      --text: #111;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--orange);
+      color: var(--text);
+    }
+
+    /* Main container */
+    .container {
+      max-width: 1240px;
+      margin: 28px auto;
+      padding: 0 18px;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .nav {
+      background: var(--dark);
+      color: white;
+      height: 60px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 25px;
+      border-radius: 6px 6px 0 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .mark {
+      width: 14px;
+      height: 14px;
+      background: var(--orange);
+      border-radius: 3px;
+    }
+
+    .nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    .nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .nav ul li a:hover {
+      color: var(--orange);
+    }
+
+    .contact-btn {
+      background: white;
+      color: black;
+      text-decoration: none;
+
+      padding: 10px 16px;
+      border-radius: 8px;
+
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    /* ================= PROJECTS ================= */
+
+    .projects {
+      background: var(--light);
+      padding: 60px 50px 70px;
+      min-height: 600px;
+      border-radius: 0 0 6px 6px;
+    }
+
+    .projects-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .projects-title h1 {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+
+    .projects-title h1 span {
+      color: var(--orange);
+    }
+
+    .projects-title p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* Project cards */
+
+    .project-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-image {
+      height: 180px;
+      background: var(--orange);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+      font-size: 45px;
+      font-weight: bold;
+    }
+
+    .project-content {
+      padding: 22px;
+    }
+
+    .project-content h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .project-content p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .project-btn {
+      display: inline-block;
+
+      background: #111;
+      color: white;
+
+      text-decoration: none;
+
+      padding: 9px 15px;
+      border-radius: 7px;
+
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .project-btn:hover {
+      background: var(--orange);
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
+
+      .nav {
+        height: auto;
+        padding: 18px;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .nav ul {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .project-container {
+        grid-template-columns: 1fr;
+      }
+
+      .projects {
+        padding: 45px 20px;
+      }
+
+      .projects-title h1 {
+        font-size: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+
+    <header class="nav">
+
+      <div class="brand">
+        <span class="mark"></span>
+        <span>Abdulaye</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home-</a></li>
+          <li><a href="about.html">About-</a></li>
+          <li><a href="projects.html">Projects-</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html" class="contact-btn">
+        Contact Me
+      </a>
+
+    </header>
+
+
+    <!-- PROJECTS SECTION -->
+
+    <section class="projects">
+
+      <div class="projects-title">
+
+        <h1>My <span>Projects</span></h1>
+
+        <p>
+          Here are some of the projects I have worked on.
+        </p>
+
+      </div>
+
+
+      <div class="project-container">
+
+        <!-- PROJECT 1 -->
+
+        <div class="project-card">
+
+          <div class="project-image">
+            01
+          </div>
+
+          <div class="project-content">
+
+            <h2>Portfolio Website</h2>
+
+            <p>
+              A responsive personal portfolio website created
+              using HTML and CSS.
+            </p>
+
+            <a href="index.html" class="project-btn">
+              View Project
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="project-card">
+
+          <div class="project-image">
+            02
+          </div>
+
+          <div class="project-content">
+
+            <h2>Calculator</h2>
+
+            <p>
+              A simple calculator application that performs
+              basic mathematical operations.
+            </p>
+
+            <a href="calculator.html" class="project-btn">
+              View Project
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+
+        <div class="project-card">
+
+          <div class="project-image">
+            03
+          </div>
+
+          <div class="project-content">
+
+            <h2>Student Management System</h2>
+
+            <p>
+              A simple system designed to manage student
+              information and academic records.
+            </p>
+
+            <a href="student management system.py" class="project-btn">
+              View Project
+            </a>
+
+          </div>
+
+        </div>
+
+
+        
+
+
+        <!-- PROJECT 4 -->
+
+        <div class="project-card">
+
+          <div class="project-image">
+            04
+          </div>
+
+          <div class="project-content">
+
+            <h2>Shopping Cart</h2>
+
+            <p>
+              A small web project that calculates products,
+              quantities and the total shopping price.
+            </p>
+
+            <a href="shopping cart.html" class="project-btn">
+              View Project
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- PROJECT 5 -->
+
+        <div class="project-card">
+
+          <div class="project-image">
+            05
+          </div>
+
+          <div class="project-content">
+
+            <h2>To-Do List</h2>
+
+            <p>
+              A simple task management application for
+              adding, completing and removing tasks.
+            </p>
+
+            <a href="To do list.html" class="project-btn">
+              View Project
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</body>
+</html>
